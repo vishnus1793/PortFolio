@@ -11,6 +11,38 @@
 # Help: https://bootstrapmade.com/color-system/
 --------------------------------------------------------------*/
 /* Fonts */
+/* 1. Kill extra vertical space inside title block */
+.section-title.resume-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin: 0;
+    padding: 0;
+}
+
+/* 2. Remove hidden spacing from h2 */
+.section-title h2 {
+    margin: 0;
+    padding: 0;
+    line-height: 1.2;
+}
+
+/* 3. Remove pseudo-element spacing (IMPORTANT) */
+.section-title h2::after {
+    margin: 6px 0 0 0;   /* reduce underline gap */
+}
+
+/* 4. Remove spacing between title and paragraph */
+.resume .container > p {
+    margin-top: 8px;
+}
+
+/* 5. Remove section padding completely (if needed) */
+.resume.section {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
 :root {
   --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --heading-font: "Raleway",  sans-serif;
