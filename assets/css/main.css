@@ -5,11 +5,101 @@
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
+.title-row{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
 
+.title-row h2{
+  margin:0;
+}
+
+.dev-card{
+  display:flex;
+  align-items:center;
+}
+
+.typing-banner{
+  height:40px;
+  width:auto;
+}
 /*--------------------------------------------------------------
 # Font & Color Variables
 # Help: https://bootstrapmade.com/color-system/
 --------------------------------------------------------------*/
+.profile-img{
+    display:flex;
+    justify-content:center;
+    margin-bottom:20px;
+}
+
+.flip-card{
+    width:165px;
+    height:165px;
+    perspective:1200px;
+
+    border-radius:50%;
+
+    padding:10px;
+
+    background:radial-gradient(
+        circle,
+        rgba(29,185,84,.25),
+        transparent 70%
+    );
+}
+
+.flip-card-inner{
+    position:relative;
+    width:100%;
+    height:100%;
+
+    transform-style:preserve-3d;
+
+    transition:transform .8s ease;
+}
+
+.flip-card:hover .flip-card-inner{
+    transform:rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back{
+    position:absolute;
+    width:100%;
+    height:100%;
+
+    border-radius:10%;
+
+    backface-visibility:hidden;
+
+    overflow:hidden;
+}
+
+.flip-card-front{
+    background:#0f172a;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    color:#1DB954;
+    font-size:50px;
+
+    border:4px solid rgba(29,185,84,.4);
+}
+
+.flip-card-back{
+    transform:rotateY(180deg);
+}
+
+.flip-card-back img{
+    width:180%;
+    height:140%;
+    object-fit:cover;
+}
 /* Fonts */
 /* 1. Kill extra vertical space inside title block */
 .section-title.resume-row {
